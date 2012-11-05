@@ -1,0 +1,106 @@
+# Copyright (C) 2012 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: simple-paginated-posts\n"
+"POT-Creation-Date: 2012-11-01 10:01+0100\n"
+"PO-Revision-Date: 2012-11-01 10:01+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: includes/class-simple-paginated-posts.php:52
+#: includes/spp-template.php:9
+msgid "Pages:"
+msgstr ""
+
+#: includes/class-simple-paginated-posts.php:54
+msgid "Next page"
+msgstr ""
+
+#: includes/class-simple-paginated-posts.php:55
+msgid "Previous page"
+msgstr ""
+
+#: includes/class-simple-paginated-posts.php:140
+msgid "Continued from: "
+msgstr ""
+
+#: includes/class-simple-paginated-posts.php:146
+msgid "Continued ..."
+msgstr ""
+
+#: includes/class-simple-paginated-posts.php:197
+msgid "This is the TOC:"
+msgstr ""
+
+#: includes/class-spp-admin.php:54
+msgid "Settings"
+msgstr ""
+
+#: includes/class-spp-admin.php:55
+msgid "Implementation in theme:"
+msgstr ""
+
+#: includes/class-spp-admin.php:64
+#: includes/class-spp-admin.php:87
+msgid "Simple Paginated Posts Settings"
+msgstr ""
+
+#: includes/class-spp-admin.php:64
+msgid "Paginated Posts"
+msgstr ""
+
+#: includes/class-spp-admin.php:113
+msgid ""
+"Use automatic implementation or manually insert the SPP functions in your "
+"theme?"
+msgstr ""
+
+#: includes/class-spp-admin.php:150
+msgid "Instructions"
+msgstr ""
+
+#: includes/class-tla-test-requirements.php:38
+msgid ""
+"The &quot;Custom Page List&quot; plugin encountered errors! It cannot load!"
+msgstr ""
+
+#: includes/page-sidebar.php:10
+msgid "Support"
+msgstr ""
+
+#: includes/page-sidebar.php:13
+msgid ""
+"If you are having problems with this plugin, please talk about them in the"
+msgstr ""
+
+#: includes/page-sidebar.php:13
+msgid "Support forum"
+msgstr ""
+
+#: includes/page-sidebar.php:14
+msgid "You can also find documentation and examples of implementations on the"
+msgstr ""
+
+#: includes/page-sidebar.php:14
+msgid "plugin homepage"
+msgstr ""
+
+#: includes/page-sidebar.php:19
+msgid "About this Plugin"
+msgstr ""
+
+#: includes/page-sidebar.php:29
+msgid "This plugin is sponsered by"
+msgstr ""
+
+#: includes/page-sidebar.php:37
+msgid "by"
+msgstr ""
+
+#: includes/spp-template.php:10
+msgid "The TOC:"
+msgstr ""
