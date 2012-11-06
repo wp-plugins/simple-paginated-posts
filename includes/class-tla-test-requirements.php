@@ -35,7 +35,7 @@ class TLA_SPP_test_requirements {
 				$error_items .= "<li>$e</li>";
 			}
 			print '<div id="cpl-plugin-error" class="error"><p><strong>'
-				.__('The &quot;Custom Page List&quot; plugin encountered errors! It cannot load!')
+				.__('The &quot;Simple Paginated Posts&quot; plugin encountered errors! It cannot load!')
 				.'</strong>'
 				."<ul style='margin-left:30px;'>$error_items</ul>"
 				.'</p></div>';

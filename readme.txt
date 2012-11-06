@@ -28,7 +28,7 @@ If you choose to implement Simple Paginated Posts (SPP) manually you need to ins
     spp_toc() - Displays the Table Of Contents
     spp_link_pages() - Displays: Previous 1 2 3 4 Next
 
-Please refer to the plugin homepage for full documentation of the template functions  
+Please refer to the plugin homepage for full documentation of the template functions.
 
 == Installation ==
 

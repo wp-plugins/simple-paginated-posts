@@ -194,7 +194,7 @@ class TLA_Simple_Paginated_Posts {
 	 */
 	function the_toc( $args = '' ) {
 		$defaults = array(
-				'before' => '<p>' . __('This is the TOC:'), 'after' => '</p>',
+				'before' => '<p>' . __('Table of contents:'), 'after' => '</p>',
 				'echo' => 1
 		);
 
