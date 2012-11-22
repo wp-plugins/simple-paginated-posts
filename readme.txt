@@ -3,7 +3,7 @@ Contributors: tlamedia
 Donate link: http://www.tlamedia.dk/
 Tags: pagination, post pagination, page pagination, navigation
 Requires at least: 3.2
-Tested up to: 3.4.2
+Tested up to: 3.5
 License: GPLv2 or later
 Stable tag: trunk
 
