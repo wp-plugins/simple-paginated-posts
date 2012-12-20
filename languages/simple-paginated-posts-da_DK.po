@@ -1,10 +1,11 @@
-# Copyright (C) 2012 
-# This file is distributed under the same license as the  package.
+# Copyright (C) 2012 TLA Media
+# This file is distributed under the same license as the Simple Paginated Posts package.
 msgid ""
 msgstr ""
 "Project-Id-Version: Simple Paginated Posts\n"
-"POT-Creation-Date: 2012-11-01 10:01+0100\n"
-"PO-Revision-Date: 2012-11-06 10:06+0100\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/simple-paginated-posts\n"
+"POT-Creation-Date: 2012-11-06 09:20:44+00:00\n"
+"PO-Revision-Date: 2012-12-20 11:27+0100\n"
 "Last-Translator: Torben Lundsgaard <tl@tlamedia.dk>\n"
 "Language-Team: TLA Media\n"
 "Language: Danish\n"
@@ -28,7 +29,7 @@ msgstr "Forrige side"
 
 #: includes/class-simple-paginated-posts.php:140
 msgid "Continued from: "
-msgstr "Fortsat fra:"
+msgstr "Fortsat fra: "
 
 #: includes/class-simple-paginated-posts.php:146
 msgid "Continued ..."
@@ -53,6 +54,10 @@ msgstr "Simple Paginated Posts indstillinger"
 #: includes/class-spp-admin.php:64
 msgid "Paginated Posts"
 msgstr "Opdelte indlæg"
+
+#: includes/class-spp-admin.php:93
+msgid "Save Changes"
+msgstr "Gem ændringer"
 
 #: includes/class-spp-admin.php:113
 msgid ""
@@ -106,3 +111,23 @@ msgstr "Dette plugin er sponseret af"
 #: includes/page-sidebar.php:37
 msgid "by"
 msgstr "af"
+
+#. Plugin Name of the plugin/theme
+msgid "Simple Paginated Posts"
+msgstr "Simple Paginated Posts"
+
+#. Plugin URI of the plugin/theme
+msgid "http://wpplugins.tlamedia.dk/simple-paginated-posts/"
+msgstr "http://wpplugins.tlamedia.dk/simple-paginated-posts/"
+
+#. Description of the plugin/theme
+msgid "Generate table of contents for paginated posts"
+msgstr "Generer indholdsfortegnelse for opdelte indlæg"
+
+#. Author of the plugin/theme
+msgid "TLA Media"
+msgstr "TLA Media"
+
+#. Author URI of the plugin/theme
+msgid "http://www.tlamedia.dk/"
+msgstr "http://www.tlamedia.dk/"

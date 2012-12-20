@@ -41,7 +41,16 @@ Please refer to the plugin homepage for full documentation of the template funct
 
 * Initial beta release.
 
+= 0.1.1 =
+
+* Added option to override spp-template.php in theme
+* Fixed problem with loading textdomain.
+* Updated Danish translation
+
 == Upgrade Notice ==
 
 = 0.1 =
 This is the first beta release so please don't use the plugin in production.
+
+= 0.1.1 =
+Tested up to WordPress 3.5.

@@ -2,7 +2,6 @@
 /**
  * Main class for the Simple Paginated Posts plugin
  * 
- * @todo: Fallback to first Hx header tag after <!--nextpage--> if no shortcode
  */
 
 class TLA_Simple_Paginated_Posts {
@@ -15,8 +14,7 @@ class TLA_Simple_Paginated_Posts {
 	 * Class constructor
 	 */
 	function __construct() {
-		$this->load_plugin_textdomain();
-
+		add_action( 'init', array( $this, 'load_translation' ) );
 		add_action( 'wp_head', array( $this, 'get_page_titles' ), 10 );
 		add_filter( 'the_title', array( $this, 'the_title' ), 10, 1 );
 		add_filter( 'the_content', array( $this, 'add_to_content'), 10 );
@@ -31,10 +29,10 @@ class TLA_Simple_Paginated_Posts {
 	 *
 	 * Note: If a translation file is loaded from 'WP_LANG_DIR/simple-paginated-post' it overrides the default translation file
 	 **/
-	function load_plugin_textdomain() {
+	function load_translation() {
 		$locale = apply_filters( 'plugin_locale', get_locale(), 'simple-paginated-posts' );
 		load_textdomain( 'simple-paginated-posts', WP_LANG_DIR.'/simple-paginated-posts/simple-paginated-posts-'.$locale.'.mo' );
-		load_plugin_textdomain( 'simple-paginated-posts', false, TLA_SPP_DIR.'/languages/' );
+		load_plugin_textdomain( 'simple-paginated-posts', false, plugin_basename( TLA_SPP_DIR.'/languages/' ) );
 	}
 	
 	
@@ -163,7 +161,7 @@ class TLA_Simple_Paginated_Posts {
 	 * @param $content
 	 * @return string Formatted output in HTML.
 	 */
-	function add_to_content($content) {
+	function add_to_content( $content = '' ) {
 
 		global $page, $multipage, $more;
 
@@ -175,7 +173,13 @@ class TLA_Simple_Paginated_Posts {
 		$new_content = '';
 		
 		if ( $multipage && !((!$more) && ($page==1)) && $implementation == 'auto' ) {
-			include_once TLA_SPP_DIR.'/includes/spp-template.php';
+			
+			if ( file_exists( STYLESHEETPATH.'/spp-template.php' ) ) {
+				include_once( STYLESHEETPATH.'/spp-template.php' );
+			} else {
+				include_once TLA_SPP_DIR.'/includes/spp-template.php';
+			}
+			
 		} else {
 			$new_content = $content;
 		}
