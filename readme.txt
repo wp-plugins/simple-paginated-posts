@@ -5,7 +5,7 @@ Tags: pagination, post pagination, page pagination, navigation
 Requires at least: 3.2
 Tested up to: 3.5
 License: GPLv2 or later
-Stable tag: trunk
+Stable tag: 0.1.1
 
 Generate table of contents for paginated posts 
 
