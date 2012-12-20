@@ -47,7 +47,7 @@ class TLA_Simple_Paginated_Posts {
 	 */
 	function page_links( $args = '' ) {
 		$defaults = array(
-				'before' => '<p>' . __('Pages:'), 'after' => '</p>',
+				'before' => '<p>' . __('Pages:') . ' ', 'after' => '</p>',
 				'link_before' => '', 'link_after' => '',
 				'next_or_number' => 'number', 'nextpagelink' => __('Next page'),
 				'previouspagelink' => __('Previous page'), 'pagelink' => '%',
@@ -83,6 +83,7 @@ class TLA_Simple_Paginated_Posts {
 				if ( 'both' == $next_or_number ) {
 					$i = $page + 1;
 					if ( $i <= $numpages && $more ) {
+						$output .= ' ';
 						$output .= _wp_link_page($i);
 						$output .= $link_before. $nextpagelink . $link_after . '</a>';
 					}

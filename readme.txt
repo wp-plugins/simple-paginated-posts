@@ -5,7 +5,7 @@ Tags: pagination, post pagination, page pagination, navigation
 Requires at least: 3.2
 Tested up to: 3.5
 License: GPLv2 or later
-Stable tag: 0.1.1
+Stable tag: 0.1.2
 
 Generate table of contents for paginated posts 
 
@@ -37,9 +37,9 @@ Please refer to the plugin homepage for full documentation of the template funct
 
 == Changelog ==
 
-= 0.1 =
+= 0.1.2 =
 
-* Initial beta release.
+* Added spacing in page links
 
 = 0.1.1 =
 
@@ -47,10 +47,14 @@ Please refer to the plugin homepage for full documentation of the template funct
 * Fixed problem with loading textdomain.
 * Updated Danish translation
 
-== Upgrade Notice ==
-
 = 0.1 =
-This is the first beta release so please don't use the plugin in production.
+
+* Initial beta release.
+
+== Upgrade Notice ==
 
 = 0.1.1 =
 Tested up to WordPress 3.5.
+
+= 0.1 =
+This is the first beta release so please don't use the plugin in production.
