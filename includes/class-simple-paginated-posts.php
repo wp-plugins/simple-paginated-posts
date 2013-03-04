@@ -246,16 +246,37 @@ class TLA_Simple_Paginated_Posts {
 	 * @return array Page titles.
 	 */
 	function get_page_titles() {
-		global $post, $pages, $numpages;
+		global $post, $numpages;
 
-		$this->page_titles[0] = $post->post_title;
-			
-		$shortcode_pattern = get_shortcode_regex();
-	
-		for ( $i = 1; $i < ($numpages); $i = $i + 1 ) {
-			preg_replace_callback( "/$shortcode_pattern/s", array( $this, 'get_shortcode_atts' ), $pages[$i] );
+		$numpages = 1;
+
+		$page = get_query_var('page');
+		if ( !$page )
+			$page = 1;
+					
+		$content = $post->post_content;
+		if ( strpos( $content, '<!--nextpage-->' ) ) {
+			if ( $page > 1 )
+				$more = 1;
+			$multipage = 1;
+			$content = str_replace("\n<!--nextpage-->\n", '<!--nextpage-->', $content);
+			$content = str_replace("\n<!--nextpage-->", '<!--nextpage-->', $content);
+			$content = str_replace("<!--nextpage-->\n", '<!--nextpage-->', $content);
+			$pages = explode('<!--nextpage-->', $content);
+			$numpages = count($pages);
+		} else {
+			$multipage = 0;
 		}
-
+		
+		if ( $multipage ) {
+			$this->page_titles[0] = $post->post_title;
+				
+			$shortcode_pattern = get_shortcode_regex();
+			
+			for ( $i = 1; $i < ($numpages); $i = $i + 1 ) {
+				preg_replace_callback( "/$shortcode_pattern/s", array( $this, 'get_shortcode_atts' ), $pages[$i] );
+			}
+		}
 	}
 	
 	
