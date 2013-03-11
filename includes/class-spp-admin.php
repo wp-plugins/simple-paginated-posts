@@ -1,6 +1,8 @@
 <?php
 /**
  * Admin class for the Simple Paginated Posts plugin
+ * 
+ * @todo set default implementation method for new installs
  */
 
 class TLA_SPP_Admin {
@@ -28,7 +30,14 @@ class TLA_SPP_Admin {
 	
 		if ( version_compare( $installed_version, $this->plugin_version, '==' ) )
 			return;
+
+		//New install
+		if ( $installed_version == 0 ) {
+			$options['implementation_method'] = 'auto';
+		}
+			
 	
+		/*
 		//Template for upgrading options
 		if ( version_compare( $installed_version, '0.1', '<' ) ) {
 			$options = get_option( $this->option_name );
@@ -38,6 +47,7 @@ class TLA_SPP_Admin {
 			}
 			update_option( $this->option_name, $options );
 		}
+		*/
 	
 		//Update version number
 		$options['version'] = $this->plugin_version;

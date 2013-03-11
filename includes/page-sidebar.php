@@ -30,6 +30,7 @@
 	<div class="inside">
 		<ul>
 			<li><a href="http://www.tlamedia.dk/">TLA Media</a></li>
+			<li><a href="http://www.blogbusiness.dk/">BlogBusiness</a></li>
 		</ul>
 	</div>
 </div>

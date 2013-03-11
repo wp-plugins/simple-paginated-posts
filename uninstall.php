@@ -7,4 +7,4 @@
 if ( !defined( 'WP_UNINSTALL_PLUGIN' ) )
 	exit ();
 
-delete_option('tla_cpl_options');
+delete_option('tla_spp_options');

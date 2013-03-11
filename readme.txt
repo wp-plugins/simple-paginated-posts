@@ -5,7 +5,7 @@ Tags: pagination, post pagination, page pagination, navigation
 Requires at least: 3.2
 Tested up to: 3.5
 License: GPLv2 or later
-Stable tag: 0.1.3
+Stable tag: 0.1.4
 
 Generate table of contents for paginated posts 
 
@@ -36,6 +36,12 @@ Please refer to the plugin homepage for full documentation of the template funct
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+
+= 0.1.4 =
+
+* Bugfix: Other plugins using wp_reset_query() would brake the plugin
+* Bugfix: Uninstall now cleans up after uninstall
+* Bugfix: Default implementation was not set and the default is now automatic implementation 
 
 = 0.1.3 =
 

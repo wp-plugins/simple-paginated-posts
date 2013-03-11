@@ -15,7 +15,7 @@ class TLA_Simple_Paginated_Posts {
 	 */
 	function __construct() {
 		add_action( 'init', array( $this, 'load_translation' ) );
-		add_action( 'wp_head', array( $this, 'get_page_titles' ), 10 );
+		add_action( 'wp', array( $this, 'get_page_titles' ), 10 );
 		add_filter( 'the_title', array( $this, 'the_title' ), 10, 1 );
 		add_filter( 'the_content', array( $this, 'add_to_content'), 10 );
 		add_action( 'spp_continued', array( $this, 'print_continued'), 10, 1 );
@@ -173,12 +173,12 @@ class TLA_Simple_Paginated_Posts {
 		
 		$new_content = '';
 		
-		if ( $multipage && !((!$more) && ($page==1)) && $implementation == 'auto' ) {
+		if ( $multipage && !((!$more) && ($page==1)) && $implementation != 'manual' ) {
 			
 			if ( file_exists( STYLESHEETPATH.'/spp-template.php' ) ) {
-				include_once( STYLESHEETPATH.'/spp-template.php' );
+				include( STYLESHEETPATH.'/spp-template.php' );
 			} else {
-				include_once TLA_SPP_DIR.'/includes/spp-template.php';
+				include TLA_SPP_DIR.'/includes/spp-template.php';
 			}
 			
 		} else {
