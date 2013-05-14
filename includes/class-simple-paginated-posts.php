@@ -16,7 +16,7 @@ class TLA_Simple_Paginated_Posts {
 	function __construct() {
 		add_action( 'init', array( $this, 'load_translation' ) );
 		add_action( 'wp', array( $this, 'get_page_titles' ), 10 );
-		add_filter( 'the_title', array( $this, 'the_title' ), 10, 1 );
+		add_filter( 'the_title', array( $this, 'the_title' ), 10, 2 );
 		add_filter( 'the_content', array( $this, 'add_to_content'), 10 );
 		add_action( 'spp_continued', array( $this, 'print_continued'), 10, 1 );
 		add_action( 'spp_toc', array( $this, 'the_toc'), 10, 1 );
@@ -293,6 +293,7 @@ class TLA_Simple_Paginated_Posts {
 		$atts = shortcode_parse_atts( $m[3] );
 		
 		if ( $m[2] == 'spp' ) { // [2] tag
+			global $post;
 			if ( isset($atts['title']) ) {
 				$this->page_titles[] = trim($atts['title']);
 			} else {
@@ -320,11 +321,12 @@ class TLA_Simple_Paginated_Posts {
 	 * @param int $id The post ID.
 	 * @return string The new title.
 	 */
-	function the_title( $title ) {
+	function the_title( $title, $id ) {
 
 		global $page, $multipage, $more;
 		
-		if ( $multipage && in_the_loop() && !((!$more) && ($page==1)) ) {
+		// @todo check for current page
+		if ( $multipage && in_the_loop() && !((!$more) && ($page==1)) && ($page-1)>0 ) {
 			$title = $this->page_titles[($page-1)];
 		}
 
