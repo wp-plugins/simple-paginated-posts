@@ -2,7 +2,7 @@
 /*
 Plugin Name: Simple Paginated Posts
 Description: Generate table of contents for paginated posts
-Version: 0.1.5
+Version: 0.1.6
 Author: TLA Media
 Author URI: http://www.tlamedia.dk/
 Plugin URI: http://wpplugins.tlamedia.dk/simple-paginated-posts/
@@ -60,7 +60,7 @@ if ( !defined( 'TLA_SPP_VERSION' ) && !class_exists( 'TLA_SPP_test_requirements'
 		include_once 'includes/class-tla-test-requirements.php';
 		$test_requirements = new TLA_SPP_test_requirements();
 	
-		$test_requirements->wp_version( '3.2' );
+		$test_requirements->wp_version( '3.4' );
 		$test_requirements->class_names_used( array( 'TLA_Simple_Paginated_Posts' ) );
 		$test_requirements->function_names_used( array( 'spp_link_pages' ) );
 		$test_requirements->constant_names_used( array( 'TLA_SPP_DIR', 'TLA_SPP_OPTION_NAME', 'TLA_SPP_URL' ) );
@@ -77,7 +77,7 @@ if ( !defined( 'TLA_SPP_VERSION' ) && !class_exists( 'TLA_SPP_test_requirements'
 	// Load the plugin
 	if ( $load_plugin == true ) {
 
-		define( 'TLA_SPP_VERSION', '0.1.5' );
+		define( 'TLA_SPP_VERSION', '0.1.6' );
 		define( 'TLA_SPP_DIR', dirname(__FILE__) );
 		define( 'TLA_SPP_OPTION_NAME', 'tla_spp_options' );
 		define( 'TLA_SPP_URL', plugin_dir_url(__FILE__) );

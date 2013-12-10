@@ -1,11 +1,11 @@
 === Simple Paginated Posts ===
-Contributors: tlamedia
+Contributors: ecatalyst, tlamedia
 Donate link: http://www.tlamedia.dk/
 Tags: pagination, post pagination, page pagination, navigation
-Requires at least: 3.2
-Tested up to: 3.6
+Requires at least: 3.4
+Tested up to: 3.8
 License: GPLv2 or later
-Stable tag: 0.1.5
+Stable tag: 0.1.6
 
 Generate table of contents for paginated posts 
 
@@ -36,6 +36,10 @@ Please refer to the plugin homepage for full documentation of the template funct
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+
+= 0.1.6 =
+
+* Tested up to WordPress: 3.8
 
 = 0.1.5 =
 

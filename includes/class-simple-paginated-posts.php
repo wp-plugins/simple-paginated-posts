@@ -2,6 +2,8 @@
 /**
  * Main class for the Simple Paginated Posts plugin
  * 
+ * @todo option for overriding wp_link_pages or set to ''
+ * 
  */
 
 class TLA_Simple_Paginated_Posts {
