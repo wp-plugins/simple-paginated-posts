@@ -3,7 +3,7 @@ Contributors: ecatalyst, tlamedia
 Donate link: http://www.tlamedia.dk/
 Tags: pagination, post pagination, page pagination, navigation
 Requires at least: 3.4
-Tested up to: 3.8
+Tested up to: 3.9
 License: GPLv2 or later
 Stable tag: 0.1.6
 
